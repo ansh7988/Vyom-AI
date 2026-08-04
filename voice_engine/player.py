@@ -1,34 +1,52 @@
 import pygame
+import threading
 import time
 
 pygame.mixer.init()
+
 
 class AudioPlayer:
 
     def __init__(self):
         self.is_playing = False
+        self.lock = threading.Lock()
 
     def play(self, audio_file):
 
-        self.is_playing = True
+        with self.lock:
 
-        pygame.mixer.music.load(audio_file)
-        pygame.mixer.music.play()
+            self.is_playing = True
 
-        while pygame.mixer.music.get_busy():
-            time.sleep(0.05)
+            pygame.mixer.music.load(audio_file)
+            pygame.mixer.music.play()
 
-        pygame.mixer.music.stop()
-        pygame.mixer.music.unload()      # <-- VERY IMPORTANT
+            while True:
 
-        self.is_playing = False
+                if not pygame.mixer.music.get_busy():
+                    break
+
+                if not self.is_playing:
+                    break
+
+                time.sleep(0.02)
+
+            pygame.mixer.music.stop()
+            pygame.mixer.music.unload()
+
+            self.is_playing = False
 
     def stop(self):
 
-        pygame.mixer.music.stop()
-        pygame.mixer.music.unload()
+        with self.lock:
 
-        self.is_playing = False
+            if pygame.mixer.music.get_busy():
+                pygame.mixer.music.stop()
+                pygame.mixer.music.unload()
+
+            self.is_playing = False
 
     def speaking(self):
-        return self.is_playing
+        with self.lock:
+            return self.is_playing
+
+player = AudioPlayer()

@@ -4,7 +4,7 @@ class SpeechRequest:
         self,
         text,
         profile,
-        priority="normal",
+        priority=2,
         emotion="normal",
         interrupt=False,
     ):

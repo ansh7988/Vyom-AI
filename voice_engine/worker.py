@@ -4,17 +4,17 @@ from voice_engine.queue_manager import SpeechQueue
 import asyncio
 import tempfile
 import os
+from voice_engine import cache
 
 from voice_engine.edge_backend import generate_audio
-from voice_engine.player import AudioPlayer
-player = AudioPlayer()
+from voice_engine.player import player
 class SpeechWorker:
 
     def __init__(self, queue):
 
         self.queue = queue
-
         self.running = True
+        self.on_finish = None
 
         self.thread = threading.Thread(
             target=self.run,
@@ -34,25 +34,28 @@ class SpeechWorker:
                     break
 
                 request = self.queue.get_next()
+                
+                path = cache.get(text=request.text, profile=request.profile)
 
-            with tempfile.NamedTemporaryFile(
-                suffix=".mp3",
-                delete=False,
-            ) as temp:
+        
+            if cache.exists(request.text, request.profile):
 
-                path = temp.name
+                temp_path = path + ".tmp.mp3"
 
-            asyncio.run(
-                generate_audio(
-                    text=request.text,
-                    profile=request.profile,
-                    output_file=path,
+                asyncio.run(
+                    generate_audio(
+                        text=request.text,
+                        profile=request.profile,
+                        output_file=temp_path,
+                    )
                 )
-            )
 
+                os.replace(temp_path, path)
+                print(f"[CACHE STORE] Audio stored at {path}")
             player.play(path)
 
-            os.remove(path)
+            if self.on_finish:
+                self.on_finish()
 
 
     def start(self):

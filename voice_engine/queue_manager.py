@@ -8,9 +8,23 @@ class SpeechQueue:
         self.queue = deque()
         self.condition = threading.Condition()
 
-    def add(self, request:SpeechRequest):
+    def add(self, request: SpeechRequest):
+
         with self.condition:
-            self.queue.append(request)
+
+            inserted = False
+
+            for i, existing in enumerate(self.queue):
+
+                if request.priority < existing.priority:
+
+                    self.queue.insert(i, request)
+                    inserted = True
+                    break
+
+            if not inserted:
+                self.queue.append(request)
+
             self.condition.notify()
 
     def get_next(self):
