@@ -34,14 +34,3 @@ class VoiceEngine:
             profile=profile
         )
 
-        self.queue.add(request)
-        # Delete the file after playback
-
-    def stop(self):
-        self.worker.stop()
-
-    def is_speaking(self):
-        return self.worker.is_speaking()
-
-
-voice = VoiceEngine()
