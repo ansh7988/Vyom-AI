@@ -20,13 +20,3 @@ class DecisionEngine:
             return "RECALL_MEMORY"
 
 
-        elif task.startswith("open"):
-            return "OPEN_APP"
-
-        elif task.startswith("search"):
-            return "SEARCH"
-
-        else:
-            return "CHAT"
-
-        
