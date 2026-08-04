@@ -1,6 +1,4 @@
 from ollama import chat
-
-
 def classify(user_input):
 
     prompt = f"""
