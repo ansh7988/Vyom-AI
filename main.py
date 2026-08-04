@@ -8,6 +8,7 @@ from brain.decision import DecisionEngine
 from brain.memory import Memory
 from brain.short_memory import ShortMemory
 
+
 conversation = Conversation()
 state = VyomState()
 decision = DecisionEngine()
