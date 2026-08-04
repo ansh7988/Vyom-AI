@@ -6,15 +6,7 @@ class Memory:
 
     def __init__(self):
 
-        self.file = "memory/user_memory.json"
-
-        if not os.path.exists("memory"):
-            os.makedirs("memory")
-
-        if not os.path.exists(self.file):
-            with open(self.file, "w") as f:
-                json.dump({}, f, indent=4)
-
+        
     def load(self):
 
         with open(self.file, "r") as f:
