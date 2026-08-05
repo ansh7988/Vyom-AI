@@ -1,6 +1,6 @@
 import json
 import os
-
+from datetime import datetime
 
 class Memory:
 
@@ -25,18 +25,40 @@ class Memory:
         with open(self.file, "w") as f:
             json.dump(data, f, indent=4)
 
+
     def remember(self, key, value):
 
         data = self.load()
 
-        from datetime import datetime
+        now = datetime.now().isoformat()
 
-        data[key] = {
-            "value": value,
-            "type": "preference",
-            "created": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        }
+        # Old format (string)
+        if key in data and isinstance(data[key], str):
+
+            old_value = data[key]
+
+            data[key] = {
+                "value": old_value,
+                "created_at": now,
+                "updated_at": now,
+                "confidence": 1.0
+            }
+
+        # Update existing memory
+        if key in data:
+
+            data[key]["value"] = value
+            data[key]["updated_at"] = now
+
+        # Create new memory
+        else:
+
+            data[key] = {
+                "value": value,
+                "created_at": now,
+                "updated_at": now,
+                "confidence": 1.0
+            }
 
         self.save(data)
 
