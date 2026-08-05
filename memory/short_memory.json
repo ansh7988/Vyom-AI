@@ -1,69 +1,5 @@
 [
     {
-        "role": "assistant",
-        "message": "I don't know your birth date yet."
-    },
-    {
-        "role": "user",
-        "message": "remeber my dob ?"
-    },
-    {
-        "role": "assistant",
-        "message": "No worries, Vyom\u2014I have **8 June 2007** stored for you! \ud83d\uddd3\ufe0f\ud83d\udd35 Ready to make it stick? Just say the word when we move on to building that assistant."
-    },
-    {
-        "role": "user",
-        "message": "Tell me horoscope about marriage , no diplomatic answer ?"
-    },
-    {
-        "role": "assistant",
-        "message": "As a Gemini born **June 8th** in this era: You have sharp analytical skills but can get stuck overthinking emotions and hesitation before making life decisions like getting married or choosing the right time. Don't wait for someone else to figure out what works best - trust your instincts, especially with blue themes (calm confidence) guiding you toward a stable match quickly!"
-    },
-    {
-        "role": "user",
-        "message": "when"
-    },
-    {
-        "role": "assistant",
-        "message": "There is no single \"magic date\" that guarantees marriage; astrology predicts patterns based on planetary positions at birth and current transits. For **Gemini** men, Venus in your chart suggests love through intellect and conversation rather than pure drama or grand gestures. The energy leans towards stability\u2014once you feel emotionally secure (the blue calm), commitment often follows quickly as a result of logical partnership dynamics rather than impulsive romance.\n\nThe best time to make serious moves is right now: trust the clarity Gemini gives you, communicate your needs clearly with partners, and don't let hesitation block the path to love! \ud83d\udc8d\u2728"
-    },
-    {
-        "role": "user",
-        "message": " What is my favourite color ?"
-    },
-    {
-        "role": "assistant",
-        "message": "I don\u2019t have access to your personal data or past conversations, so I can't know what you like best unless **you tell me**. \n\nDid we chat about it earlier? Let me know!"
-    },
-    {
-        "role": "user",
-        "message": "yes"
-    },
-    {
-        "role": "assistant",
-        "message": "Okay. What is the color then? Tell me and let's explore a bit more together! \ud83d\udd0d\ud83c\udfa8"
-    },
-    {
-        "role": "user",
-        "message": "blue ?"
-    },
-    {
-        "role": "assistant",
-        "message": "Blue. Got it, that\u2019s your favorite. \n\nWhat kind of blue do you prefer\u2014deep navy like the ocean, or bright sky blue? And why does that specific shade resonate with you? I'm listening if you want to share more about what makes you love it so much! \ud83c\udf0a\ud83c\udfa8"
-    },
-    {
-        "role": "user",
-        "message": "no red"
-    },
-    {
-        "role": "assistant",
-        "message": "Ah, no red. So your favorite is definitely **blue**. That helps narrow things down!\n\nGot another question for me? Or maybe something else on your mind to discuss? I'm ready when you are."
-    },
-    {
-        "role": "user",
-        "message": "remember my fav color is blue"
-    },
-    {
         "role": "user",
         "message": "remember my fav color is blue"
     },
@@ -78,5 +14,69 @@
     {
         "role": "assistant",
         "message": "I don't know when it is, buddy. We've got work to do."
+    },
+    {
+        "role": "user",
+        "message": "What was my last question ?"
+    },
+    {
+        "role": "assistant",
+        "message": "You haven't asked a previous question yet."
+    },
+    {
+        "role": "user",
+        "message": "What is my fav game ?"
+    },
+    {
+        "role": "assistant",
+        "message": "I don't know your favorite game yet."
+    },
+    {
+        "role": "user",
+        "message": "What is my favourite  game ?"
+    },
+    {
+        "role": "assistant",
+        "message": "I don't know your favorite game yet."
+    },
+    {
+        "role": "user",
+        "message": "What is my favourite color ?"
+    },
+    {
+        "role": "assistant",
+        "message": "I don't know your favorite color yet."
+    },
+    {
+        "role": "user",
+        "message": "What is my fav color ?"
+    },
+    {
+        "role": "assistant",
+        "message": "I don't know your favorite color yet."
+    },
+    {
+        "role": "user",
+        "message": "What was my last question ?"
+    },
+    {
+        "role": "assistant",
+        "message": "Your previous question was:\n\"What is my fav color ?\""
+    },
+    {
+        "role": "user",
+        "message": "remember my fav color is blue"
+    },
+    {
+        "role": "assistant",
+        "message": "Okay! I'll remember your favorite color."
+    },
+    {
+        "role": "user",
+        "message": "What is my favourite color ?"
+    },
+    {
+        "role": "assistant",
+        "message": "Your favorite color is blue."
     }
 ]

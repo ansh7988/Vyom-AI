@@ -5,14 +5,14 @@ from brain.conversation import Conversation
 from brain.state import VyomState
 from classifier import classify
 from brain.decision import DecisionEngine
-from brain.memory import Memory
+from brain.memory_manager import MemoryManager
 from brain.short_memory import ShortMemory
-
+from brain.ai_memory import extract_memory
 
 conversation = Conversation()
 state = VyomState()
 decision = DecisionEngine()
-memory = Memory()
+memory = MemoryManager()
 short_memory = ShortMemory()
 
 
@@ -113,50 +113,24 @@ while True:
     # -----------------------------
     # Handle Save Memory
     # -----------------------------
-    elif action == "SAVE_MEMORY":
-
-        text = user_input.replace("remember", "", 1).strip()
-
-        if " is " in text:
-
-            key, value = text.split(" is ", 1)
-
-            key = key.strip().lower()
-            if key.startswith("my "):
-                key = key[3:]
-            value = value.strip()
-
-            memory.remember(key, value)
-
-            reply = f"Okay! I'll remember your {key}."
-
-        else:
-
-            reply = "Please tell me what you want me to remember."
-
-        print(f"\nVyom: {reply}")
-
-        conversation.add_assistant_message(reply)
-        short_memory.remember("assistant", reply)
-        state.set_last_response(reply)
-
-        continue
+   
 
     # -----------------------------
     # Handle Recall Memory
     # -----------------------------
-    elif action == "RECALL_MEMORY":
+# -----------------------------
+# AI Memory
+    # -----------------------------
+    memory_result = extract_memory(user_input)
 
-        text = user_input.lower()
+    if memory_result["action"] == "remember":
 
-        key = text.replace("what is my", "").replace("?", "").strip()
+        key = memory_result["key"]
+        value = memory_result["value"]
 
-        value = memory.recall(key)
+        memory.save(key, value)
 
-        if value is None:
-            reply = f"I don't know your {key} yet."
-        else:
-            reply = f"Your {key} is {value}."
+        reply = f"Okay! I'll remember your {key.replace('_', ' ')}."
 
         print(f"\nVyom: {reply}")
 
@@ -166,6 +140,36 @@ while True:
 
         continue
 
+
+    memory_data = memory.search(user_input)
+
+    if memory_data is not None:
+
+        reply = f"{memory_data}"
+
+        print(f"\nVyom: {reply}")
+
+        conversation.add_assistant_message(reply)
+        short_memory.remember("assistant", reply)
+        state.set_last_response(reply)
+
+        continue
+    
+        if value:
+
+            reply = f"Your {key.replace('_', ' ')} is {value}."
+
+        else:
+
+            reply = f"I don't know your {key.replace('_', ' ')} yet."
+
+        print(f"\nVyom: {reply}")
+
+        conversation.add_assistant_message(reply)
+        short_memory.remember("assistant", reply)
+        state.set_last_response(reply)
+
+        continue
     # -----------------------------
     # Default Chat
     # -----------------------------

@@ -5,40 +5,72 @@ from ollama import chat
 def extract_memory(user_input):
 
     prompt = f"""
-You are Vyom's memory manager.
+    You are Vyom's Memory Intelligence Engine.
 
-Analyze the user's sentence.
+    Your job is to determine whether the user is:
 
-If the user is telling you something about themselves,
-return JSON like:
+    1. Trying to SAVE memory.
+    2. Trying to RECALL memory.
+    3. Not talking about memory.
 
-{{
+    Return ONLY valid JSON.
+
+    SAVE example:
+
+    {{
     "action":"remember",
     "key":"favorite_color",
     "value":"blue"
-}}
+    }}
 
-If the user is asking something already stored,
-return:
+    RECALL example:
 
-{{
+    {{
     "action":"recall",
     "key":"favorite_color"
-}}
+    }}
 
-Rules:
-- Return ONLY valid JSON.
-- Use snake_case keys.
-- Normalize similar meanings.
-Examples:
-DOB, birth date, birthday -> date_of_birth
-fav color, favourite colour -> favorite_color
-laptop name, computer name -> laptop
-college, university -> college
+    NOT MEMORY:
 
-User:
-{user_input}
-"""
+    {{
+    "action":"none"
+    }}
+
+    Normalize these automatically:
+
+    DOB
+    Birth date
+    Birthday
+    Date of birth
+    Born on
+    → date_of_birth
+
+    Favourite colour
+    Favorite colour
+    Fav colour
+    Fav color
+    Colour
+    Color
+    → favorite_color
+
+    Laptop
+    Laptop name
+    Computer
+    PC
+    → laptop
+
+    College
+    University
+    Campus
+    → college
+
+    Never explain.
+    Never add markdown.
+    Return JSON only.
+
+    User:
+    {user_input}
+    """
 
     response = chat(
         model="qwen3.5:4b",
