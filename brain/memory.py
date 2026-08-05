@@ -29,7 +29,14 @@ class Memory:
 
         data = self.load()
 
-        data[key] = value
+        from datetime import datetime
+
+        data[key] = {
+            "value": value,
+            "type": "preference",
+            "created": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
 
         self.save(data)
 
@@ -37,4 +44,9 @@ class Memory:
 
         data = self.load()
 
-        return data.get(key, None)
+        memory = data.get(key)
+
+        if memory:
+            return memory["value"]
+
+        return None
