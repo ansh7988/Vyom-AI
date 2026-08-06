@@ -11,6 +11,7 @@ class SpeechWorker:
 
     def __init__(self, queue):
 
+        
         self.queue = queue
         self.running = True
         self.on_finish = None
