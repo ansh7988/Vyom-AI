@@ -44,11 +44,8 @@ class MemoryManager:
         if result["intent"] != "recall":
             return None
 
-        entity = result["entity"]["type"]
+        result = self.semantic_search(result)
 
-        return self.recall(entity)
-
-        
 
     def semantic_search(self, memory_request):
 
@@ -58,7 +55,14 @@ class MemoryManager:
 
         entity = memory_request["entity"]["type"]
 
-        return self.recall(entity)
+        memory = self.recall(entity)
+
+        if memory is None:
+            return []
+
+        return [memory]
+
+
     # -----------------------------
     # Check Memory
     # -----------------------------
@@ -86,17 +90,3 @@ class MemoryManager:
     def get_all(self):
 
         return self.memory.load()
-
-from brain.memory_analyzer import understand_memory
-
-
-def search(self, query):
-
-    result = understand_memory(query)
-
-    if result["intent"] != "recall":
-        return None
-
-    entity = result["entity"]["type"]
-
-    return self.recall(entity)
