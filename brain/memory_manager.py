@@ -4,7 +4,10 @@ from brain.memory import Memory
 class MemoryManager:
 
     def __init__(self):
+        from brain.embedding_engine import EmbeddingEngine
         self.memory = Memory()
+        self.embedding = EmbeddingEngine()
+
 
     # -----------------------------
     # Save Memory
@@ -16,6 +19,8 @@ class MemoryManager:
             value=value,
             confidence=confidence
         )
+
+        self.embedding.create_embedding(value)
 
     # -----------------------------
     # Recall Memory
