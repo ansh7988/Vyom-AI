@@ -13,6 +13,7 @@ def get_cache_path(text, profile):
     return os.path.join(CACHE_DIR, filename)
 
 
+
 def exists(text, profile):
 
     return os.path.exists(get_cache_path(text, profile))
