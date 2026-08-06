@@ -62,7 +62,13 @@ class MemoryManager:
 
         return [memory]
 
+    def rank_memories(self, query, memories):
 
+        """
+        Future memory ranking.
+        """
+
+        return memories
     # -----------------------------
     # Check Memory
     # -----------------------------
