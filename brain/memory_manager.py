@@ -48,6 +48,8 @@ class MemoryManager:
 
         return self.recall(entity)
 
+        
+
     def semantic_search(self, memory_request):
 
         """
