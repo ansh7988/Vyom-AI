@@ -55,12 +55,17 @@ class Memory:
 
             data[key] = {
                 "value": value,
+                "embedding": embedding,
                 "created_at": now,
                 "updated_at": now,
                 "confidence": 1.0
             }
 
         self.save(data)
+
+        from brain.embedding_engine import EmbeddingEngine
+        engine = EmbeddingEngine()
+        embedding = engine.create_embedding(value)
 
     def recall(self, key):
 
