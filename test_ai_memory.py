@@ -5,3 +5,5 @@ while True:
     text = input("You: ")
 
     print(analyze_memory(text))
+
+    
