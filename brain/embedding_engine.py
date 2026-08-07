@@ -11,7 +11,7 @@ class EmbeddingEngine:
 
         response = embeddings(
             model=self.model,
-            prompt=text
+            prompt=str(text)
         )
 
         return response["embedding"]

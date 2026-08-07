@@ -1,22 +1,6 @@
 [
     {
         "role": "user",
-        "message": "What is my fav color ?"
-    },
-    {
-        "role": "assistant",
-        "message": "I don't know your favorite color yet."
-    },
-    {
-        "role": "user",
-        "message": "What was my last question ?"
-    },
-    {
-        "role": "assistant",
-        "message": "Your previous question was:\n\"What is my fav color ?\""
-    },
-    {
-        "role": "user",
         "message": "remember my fav color is blue"
     },
     {
@@ -78,5 +62,21 @@
     {
         "role": "user",
         "message": "remember i am 19 years old"
+    },
+    {
+        "role": "user",
+        "message": "remember my age is 19 years old"
+    },
+    {
+        "role": "user",
+        "message": "remember my age is 19 years"
+    },
+    {
+        "role": "assistant",
+        "message": "Okay! I'll remember your age."
+    },
+    {
+        "role": "user",
+        "message": "What is my age ?"
     }
 ]

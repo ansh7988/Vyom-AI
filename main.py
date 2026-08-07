@@ -145,7 +145,7 @@ while True:
 
         entity = memory_result["entity"]
 
-        memory_data = memory.semantic_search(entity)
+        memory_data = memory.search(entity)
 
         if memory_data is not None:
 
