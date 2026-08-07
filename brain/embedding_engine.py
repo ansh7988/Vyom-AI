@@ -15,3 +15,5 @@ class EmbeddingEngine:
         )
 
         return response["embedding"]
+
+    
