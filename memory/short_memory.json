@@ -1,33 +1,5 @@
 [
     {
-        "role": "user",
-        "message": "remember my fav color is blue"
-    },
-    {
-        "role": "assistant",
-        "message": "Okay! I'll remember your fav color."
-    },
-    {
-        "role": "user",
-        "message": "When is my birthday ?"
-    },
-    {
-        "role": "assistant",
-        "message": "I don't know when it is, buddy. We've got work to do."
-    },
-    {
-        "role": "user",
-        "message": "What was my last question ?"
-    },
-    {
-        "role": "assistant",
-        "message": "You haven't asked a previous question yet."
-    },
-    {
-        "role": "user",
-        "message": "What is my fav game ?"
-    },
-    {
         "role": "assistant",
         "message": "I don't know your favorite game yet."
     },
@@ -78,5 +50,33 @@
     {
         "role": "assistant",
         "message": "Your favorite color is blue."
+    },
+    {
+        "role": "user",
+        "message": "hello"
+    },
+    {
+        "role": "assistant",
+        "message": "Hey! Ready to tackle anything? Just drop what's on your mind, I got it covered."
+    },
+    {
+        "role": "user",
+        "message": "remember my age is 19nyears "
+    },
+    {
+        "role": "assistant",
+        "message": "Okay! I'll remember your age."
+    },
+    {
+        "role": "user",
+        "message": "What is my age ?"
+    },
+    {
+        "role": "user",
+        "message": "What is my age ?"
+    },
+    {
+        "role": "user",
+        "message": "what is my favourite color ?"
     }
 ]

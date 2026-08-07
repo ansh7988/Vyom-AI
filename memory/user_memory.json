@@ -18,5 +18,12 @@
         "created_at": "2026-08-05T17:46:40.407017",
         "updated_at": "2026-08-05T17:46:40.407017",
         "confidence": 1.0
+    },
+    "age": {
+        "value": null,
+        "embedding": [],
+        "created_at": "2026-08-07T22:21:14.669114",
+        "updated_at": "2026-08-07T22:21:14.669114",
+        "confidence": 1.0
     }
 }
