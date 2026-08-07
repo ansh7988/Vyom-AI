@@ -1,5 +1,5 @@
 from ollama import chat
-from brain.router import detect_intent 
+from brain.router import detect_intent
 from brain.personality import get_personality
 from brain.conversation import Conversation
 from brain.state import VyomState
@@ -15,14 +15,12 @@ decision = DecisionEngine()
 memory = MemoryManager()
 short_memory = ShortMemory()
 
-
 print("=" * 45)
 print("VYOM AI")
 print("=" * 45)
 
 print("\nBrain Online!")
 print("Type 'exit' to quit.\n")
-
 
 while True:
 
@@ -48,9 +46,10 @@ while True:
     print(f"\n[Intent] -> {intent}")
     print(f"[Decision] -> {action}")
 
-    # -----------------------------
-    # Handle Previous Question
-    # -----------------------------
+    # -------------------------------------------------
+    # Previous Question
+    # -------------------------------------------------
+
     if action == "GET_PREVIOUS_QUESTION":
 
         previous_question = conversation.get_previous_user_message()
@@ -68,9 +67,10 @@ while True:
 
         continue
 
-# -----------------------------
-    # Handle Last User Message
-    # -----------------------------
+    # -------------------------------------------------
+    # Last User Message
+    # -------------------------------------------------
+
     elif action == "GET_LAST_USER_MESSAGE":
 
         last_message = short_memory.get_previous_user_message()
@@ -84,15 +84,14 @@ while True:
 
         conversation.add_assistant_message(reply)
         short_memory.remember("assistant", reply)
-
         state.set_last_response(reply)
 
         continue
 
+    # -------------------------------------------------
+    # Last Assistant Reply
+    # -------------------------------------------------
 
-    # -----------------------------
-    # Handle Last Assistant Reply
-    # -----------------------------
     elif action == "GET_LAST_ASSISTANT_MESSAGE":
 
         last_reply = short_memory.get_last_assistant_message()
@@ -106,31 +105,31 @@ while True:
 
         conversation.add_assistant_message(reply)
         short_memory.remember("assistant", reply)
-
         state.set_last_response(reply)
 
         continue
-    # -----------------------------
-    # Handle Save Memory
-    # -----------------------------
-   
 
-    # -----------------------------
-    # Handle Recall Memory
-    # -----------------------------
-# -----------------------------
-# AI Memory
-    # -----------------------------
+    # =================================================
+    # AI MEMORY
+    # =================================================
+
     memory_result = extract_memory(user_input)
+
     print(memory_result)
 
     if memory_result["intent"] == "remember":
 
-        key = memory_result["entity"]["type"]
-        value = memory_result["entity"]["value"]
-        confidence = memory_result["entity"].get("confidence", 1.0)
+        entity = memory_result["entity"]
 
-        memory.save(key, value, confidence)
+        key = entity["type"]
+        value = entity["value"]
+        confidence = entity.get("confidence", 1.0)
+
+        memory.save(
+            key,
+            value,
+            confidence
+        )
 
         reply = f"Okay! I'll remember your {key.replace('_', ' ')}."
 
@@ -142,12 +141,19 @@ while True:
 
         continue
 
+    elif memory_result["intent"] == "recall":
 
-    memory_data = memory.search(user_input)
+        entity = memory_result["entity"]
 
-    if memory_data is not None:
+        memory_data = memory.semantic_search(entity)
 
-        reply = f"{memory_data}"
+        if memory_data is not None:
+
+            reply = f"Your {entity['type'].replace('_',' ')} is {memory_data}."
+
+        else:
+
+            reply = f"I don't know your {entity['type'].replace('_',' ')} yet."
 
         print(f"\nVyom: {reply}")
 
@@ -156,11 +162,12 @@ while True:
         state.set_last_response(reply)
 
         continue
-    
-    # -----------------------------
-    # Default Chat
-    # -----------------------------
-    elif action == "CHAT":
+
+    # =================================================
+    # CHAT
+    # =================================================
+
+    if action == "CHAT":
 
         print("\nVyom: ", end="", flush=True)
 
@@ -174,12 +181,22 @@ while True:
         )
 
         for chunk in stream:
+
             content = chunk["message"]["content"]
+
             assistant_reply += content
+
             print(content, end="", flush=True)
 
         print()
 
         conversation.add_assistant_message(assistant_reply)
-        short_memory.remember("assistant", assistant_reply)
-        state.set_last_response(assistant_reply)
+
+        short_memory.remember(
+            "assistant",
+            assistant_reply
+        )
+
+        state.set_last_response(
+            assistant_reply
+        )

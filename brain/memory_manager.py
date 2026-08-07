@@ -4,10 +4,11 @@ from brain.memory import Memory
 class MemoryManager:
 
     def __init__(self):
+
         from brain.embedding_engine import EmbeddingEngine
+
         self.memory = Memory()
         self.embedding = EmbeddingEngine()
-
 
     # -----------------------------
     # Save Memory
@@ -19,9 +20,6 @@ class MemoryManager:
             value=value,
             confidence=confidence
         )
-        
-
-        self.embedding.create_embedding(value)
 
     # -----------------------------
     # Recall Memory
@@ -35,13 +33,10 @@ class MemoryManager:
 
         return memory
 
+    # -----------------------------
+    # Search (V1)
+    # -----------------------------
     def search(self, query):
-
-        """
-        Search memory using a natural language query.
-        Version 1:
-        Uses Memory Analyzer to understand the query.
-        """
 
         from brain.memory_analyzer import understand_memory
 
@@ -50,31 +45,36 @@ class MemoryManager:
         if result["intent"] != "recall":
             return None
 
-        result = self.semantic_search(result)
+        entity = result["entity"]
 
+        return self.semantic_search(entity)
 
-    def semantic_search(self, memory_request):
+    # -----------------------------
+    # Semantic Search (V1)
+    # -----------------------------
+    def semantic_search(self, entity):
 
         """
-        Placeholder for future embedding search.
+        Temporary semantic search.
+
+        Currently searches by entity name.
+
+        Later this function will use embeddings.
         """
 
-        entity = memory_request["entity"]["type"]
+        key = entity["type"]
 
-        memory = self.recall(entity)
+        memory = self.recall(key)
 
-        if memory is None:
-            return []
+        return memory
 
-        return [memory]
-
+    # -----------------------------
+    # Rank Memories (Future)
+    # -----------------------------
     def rank_memories(self, query, memories):
 
-        """
-        Future memory ranking.
-        """
-
         return memories
+
     # -----------------------------
     # Check Memory
     # -----------------------------
@@ -90,8 +90,11 @@ class MemoryManager:
         data = self.memory.load()
 
         if entity in data:
+
             del data[entity]
+
             self.memory.save(data)
+
             return True
 
         return False
