@@ -2,6 +2,9 @@ import json
 import os
 from datetime import datetime
 
+from brain.embedding_engine import EmbeddingEngine
+
+
 class Memory:
 
     def __init__(self):
@@ -15,6 +18,9 @@ class Memory:
             with open(self.file, "w") as f:
                 json.dump({}, f, indent=4)
 
+        # Create embedding engine once
+        self.embedding_engine = EmbeddingEngine()
+
     def load(self):
 
         with open(self.file, "r") as f:
@@ -25,30 +31,35 @@ class Memory:
         with open(self.file, "w") as f:
             json.dump(data, f, indent=4)
 
-
-    def remember(self, key, value):
+    def remember(self, key, value, confidence=1.0):
 
         data = self.load()
 
         now = datetime.now().isoformat()
 
-        # Old format (string)
+        # Create embedding BEFORE saving
+        embedding = self.embedding_engine.create_embedding(value)
+
+        # Convert old memories to new format
         if key in data and isinstance(data[key], str):
 
             old_value = data[key]
 
             data[key] = {
                 "value": old_value,
+                "embedding": self.embedding_engine.create_embedding(old_value),
                 "created_at": now,
                 "updated_at": now,
-                "confidence": 1.0
+                "confidence": confidence
             }
 
         # Update existing memory
         if key in data:
 
             data[key]["value"] = value
+            data[key]["embedding"] = embedding
             data[key]["updated_at"] = now
+            data[key]["confidence"] = confidence
 
         # Create new memory
         else:
@@ -58,14 +69,10 @@ class Memory:
                 "embedding": embedding,
                 "created_at": now,
                 "updated_at": now,
-                "confidence": 1.0
+                "confidence": confidence
             }
 
         self.save(data)
-
-        from brain.embedding_engine import EmbeddingEngine
-        engine = EmbeddingEngine()
-        embedding = engine.create_embedding(value)
 
     def recall(self, key):
 
@@ -73,7 +80,11 @@ class Memory:
 
         memory = data.get(key)
 
-        if memory:
-            return memory["value"]
+        if memory is None:
+            return None
 
-        return None
+        # Support old JSON format
+        if isinstance(memory, str):
+            return memory
+
+        return memory["value"]
