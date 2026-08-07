@@ -72,6 +72,7 @@ Rules:
 """
 
 
+
 def understand_memory(user_input):
 
     response = chat(
