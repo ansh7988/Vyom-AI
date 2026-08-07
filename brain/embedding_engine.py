@@ -1,12 +1,17 @@
+from ollama import embeddings
+
+
 class EmbeddingEngine:
 
     def __init__(self):
-        pass
+
+        self.model = "nomic-embed-text"
 
     def create_embedding(self, text):
 
-        """
-        Future embedding generation.
-        """
+        response = embeddings(
+            model=self.model,
+            prompt=text
+        )
 
-        return None
+        return response["embedding"]
