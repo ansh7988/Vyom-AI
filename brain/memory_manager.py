@@ -19,6 +19,7 @@ class MemoryManager:
             value=value,
             confidence=confidence
         )
+        
 
         self.embedding.create_embedding(value)
 
