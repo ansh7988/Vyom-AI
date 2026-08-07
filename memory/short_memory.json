@@ -1,9 +1,5 @@
 [
     {
-        "role": "assistant",
-        "message": "I don't know your favorite game yet."
-    },
-    {
         "role": "user",
         "message": "What is my favourite  game ?"
     },
@@ -78,5 +74,9 @@
     {
         "role": "user",
         "message": "what is my favourite color ?"
+    },
+    {
+        "role": "user",
+        "message": "remember my age is 19 years"
     }
 ]

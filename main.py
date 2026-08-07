@@ -122,13 +122,15 @@ while True:
 # AI Memory
     # -----------------------------
     memory_result = extract_memory(user_input)
+    print(memory_result)
 
-    if memory_result["action"] == "remember":
+    if memory_result["intent"] == "remember":
 
-        key = memory_result["key"]
-        value = memory_result["value"]
+        key = memory_result["entity"]["type"]
+        value = memory_result["entity"]["value"]
+        confidence = memory_result["entity"].get("confidence", 1.0)
 
-        memory.save(key, value)
+        memory.save(key, value, confidence)
 
         reply = f"Okay! I'll remember your {key.replace('_', ' ')}."
 
@@ -155,21 +157,6 @@ while True:
 
         continue
     
-        if value:
-
-            reply = f"Your {key.replace('_', ' ')} is {value}."
-
-        else:
-
-            reply = f"I don't know your {key.replace('_', ' ')} yet."
-
-        print(f"\nVyom: {reply}")
-
-        conversation.add_assistant_message(reply)
-        short_memory.remember("assistant", reply)
-        state.set_last_response(reply)
-
-        continue
     # -----------------------------
     # Default Chat
     # -----------------------------
