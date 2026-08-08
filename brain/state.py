@@ -6,6 +6,7 @@ class VyomState:
         self.last_response = None
         self.user_intent = None
 
+
     def set_task(self, task):
         self.current_task = task
 
