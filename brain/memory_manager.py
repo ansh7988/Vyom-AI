@@ -35,17 +35,13 @@ class MemoryManager:
 
     # -----------------------------
     # Search (V1)
-    # -----------------------------
-    def search(self, query):
+        # -----------------------------
+    def search(self, entity):
 
-        from brain.memory_analyzer import understand_memory
-
-        result = understand_memory(query)
-
-        if result["intent"] != "recall":
-            return None
-
-        entity = result["entity"]
+        """
+        Search memory using the entity already extracted
+        by the AI Memory Engine.
+        """
 
         return self.semantic_search(entity)
 
