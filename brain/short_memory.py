@@ -41,7 +41,6 @@ class ShortMemory:
         return self.load()
 
     def get_previous_user_message(self):
-
         data = self.load()
 
         user_messages = [
