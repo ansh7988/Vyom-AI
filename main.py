@@ -18,7 +18,6 @@ short_memory = ShortMemory()
 
 print("=" * 45)
 print("VYOM AI")
-voice.speak("Hello! I am Vyom, your AI assistant. How can I help you today?")
 print("=" * 45)
 
 print("\nBrain Online!")
