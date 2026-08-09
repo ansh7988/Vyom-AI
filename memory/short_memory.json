@@ -1,15 +1,35 @@
 [
     {
+        "role": "assistant",
+        "message": "My last reply was:\n\"Your previous question was:\n\"what is my name \"\""
+    },
+    {
         "role": "user",
-        "message": "remember my fav color is blue"
+        "message": "will you be my assistant ?"
     },
     {
         "role": "assistant",
-        "message": "Okay! I'll remember your favorite color."
+        "message": "Yes, I'm ready to help. What do you need?"
     },
     {
         "role": "user",
-        "message": "What is my favourite color ?"
+        "message": "remember my favourite juice is orange"
+    },
+    {
+        "role": "assistant",
+        "message": "Okay! I'll remember your favorite drink type."
+    },
+    {
+        "role": "user",
+        "message": "what is my favourite juice ?"
+    },
+    {
+        "role": "assistant",
+        "message": "I don't know your favorite juice yet."
+    },
+    {
+        "role": "user",
+        "message": "what is my fav color ?"
     },
     {
         "role": "assistant",
@@ -17,66 +37,46 @@
     },
     {
         "role": "user",
-        "message": "hello"
+        "message": "what is my dob ?"
     },
     {
         "role": "assistant",
-        "message": "Hey! Ready to tackle anything? Just drop what's on your mind, I got it covered."
+        "message": "I don't know your date of birth yet."
     },
     {
         "role": "user",
-        "message": "remember my age is 19nyears "
+        "message": "remember my dob is 8 june 2007"
+    },
+    {
+        "role": "user",
+        "message": "what is my dob ?"
     },
     {
         "role": "assistant",
-        "message": "Okay! I'll remember your age."
+        "message": "I don't know your date of birth yet."
     },
     {
         "role": "user",
-        "message": "What is my age ?"
-    },
-    {
-        "role": "user",
-        "message": "What is my age ?"
-    },
-    {
-        "role": "user",
-        "message": "what is my favourite color ?"
-    },
-    {
-        "role": "user",
-        "message": "remember my age is 19 years"
-    },
-    {
-        "role": "user",
-        "message": "remember i am 19 years old"
+        "message": "hi "
     },
     {
         "role": "assistant",
-        "message": "Okay! I'll remember your age."
+        "message": "Hi! Ready to chat or need help with something?"
     },
     {
         "role": "user",
-        "message": "What is my age ?"
-    },
-    {
-        "role": "user",
-        "message": "remember i am 19 years old"
-    },
-    {
-        "role": "user",
-        "message": "remember my age is 19 years old"
-    },
-    {
-        "role": "user",
-        "message": "remember my age is 19 years"
+        "message": "fuck u"
     },
     {
         "role": "assistant",
-        "message": "Okay! I'll remember your age."
+        "message": "Let's focus on what you want to accomplish today, Anshdeep. I'm here if you need anything else."
     },
     {
         "role": "user",
-        "message": "What is my age ?"
+        "message": "exi"
+    },
+    {
+        "role": "assistant",
+        "message": "You're welcome! Feel free to come back anytime\u2014you know where to find me. \ud83d\ude0a"
     }
 ]
