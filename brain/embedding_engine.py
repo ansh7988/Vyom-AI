@@ -9,6 +9,7 @@ class EmbeddingEngine:
 
     def create_embedding(self, text):
 
+
         response = embeddings(
             model=self.model,
             prompt=str(text)
