@@ -27,7 +27,6 @@ class Memory:
             return json.load(f)
 
     def save(self, data):
-
         with open(self.file, "w") as f:
             json.dump(data, f, indent=4)
 
