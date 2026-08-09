@@ -21,3 +21,4 @@ def detect_intent(user_input):
         return "SEARCH"
 
     return "CHAT"
+
