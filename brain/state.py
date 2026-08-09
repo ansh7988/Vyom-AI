@@ -24,6 +24,7 @@ class VyomState:
     def get_last_response(self):
         return self.last_response
 
+
     def set_intent(self, intent):
         self.user_intent = intent
 
