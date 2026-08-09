@@ -45,6 +45,7 @@ class MemoryManager:
 
         return self.semantic_search(entity)
 
+
     # -----------------------------
     # Semantic Search (V1)
     # -----------------------------
