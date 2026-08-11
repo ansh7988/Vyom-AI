@@ -29,7 +29,7 @@ class AudioPlayer:
                     break
 
                 time.sleep(0.02)
-
+                
             pygame.mixer.music.stop()
             pygame.mixer.music.unload()
 
