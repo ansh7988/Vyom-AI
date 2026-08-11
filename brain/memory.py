@@ -87,3 +87,4 @@ class Memory:
             return memory
 
         return memory["value"]
+    
