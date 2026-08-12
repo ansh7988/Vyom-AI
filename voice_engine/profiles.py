@@ -56,7 +56,7 @@ EMOTIONS = {
     },
 
     "happy": {
-        "rate": "+15%",
+        "rate": "+20%",
         "pitch": "+3Hz",
         "volume": "+10%",
     },
