@@ -9,6 +9,7 @@ from brain.memory_manager import MemoryManager
 from brain.short_memory import ShortMemory
 from brain.ai_memory import extract_memory
 from voice_engine.engine import voice
+import speech_recognition as sr
 
 conversation = Conversation()
 state = VyomState()
@@ -22,12 +23,42 @@ print("=" * 45)
 
 print("\nBrain Online!")
 print("Type 'exit' to quit.\n")
+def listen():
+    recognizer = sr.Recognizer()
 
+    # Give the user more time between words/sentences
+    recognizer.pause_threshold = 2
+    recognizer.non_speaking_duration = 0.5
+
+    with sr.Microphone() as source:
+        print("Listening...")
+
+        recognizer.adjust_for_ambient_noise(source, duration=0.5)
+
+        audio = recognizer.listen(source)
+
+    try:
+        text = recognizer.recognize_google(audio)
+        print("You:", text)
+        return text
+
+    except sr.UnknownValueError:
+        print("Didn't understand.")
+        return ""
+
+    except sr.RequestError as e:
+        print("Speech service error:", e)
+        return ""
+    
 while True:
 
-    user_input = input("You: ")
+    user_input = listen()
 
-    if user_input.lower() == "exit":
+
+    if not user_input:
+        continue
+    if user_input.lower() in ["exit", "quit", "bye"]:
+        voice.speak("Goodbye! 👋")
         print("\nVyom: Goodbye! 👋")
         break
 
@@ -66,6 +97,7 @@ while True:
         conversation.add_assistant_message(reply)
         short_memory.remember("assistant", reply)
         state.set_last_response(reply)
+        voice.speak(reply)
 
         continue
 
@@ -203,3 +235,5 @@ while True:
         state.set_last_response(
             assistant_reply
         )
+
+        voice.speak(assistant_reply)
