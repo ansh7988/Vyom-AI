@@ -27,6 +27,7 @@ class Conversation:
             "content": message
         })
 
+
     # -----------------------------
     # Get Full Conversation
     # -----------------------------
