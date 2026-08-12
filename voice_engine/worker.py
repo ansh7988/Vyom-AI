@@ -38,7 +38,7 @@ class SpeechWorker:
                 path = cache.get(text=request.text, profile=request.profile)
 
         
-            if cache.exists(request.text, request.profile):
+            if not cache.exists(request.text, request.profile):
 
                 temp_path = path + ".tmp.mp3"
 
