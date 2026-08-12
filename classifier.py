@@ -8,6 +8,7 @@ Return ONLY ONE WORD.
 
 Possible intents:
 
+
 CHAT
 COMMAND
 SEARCH
