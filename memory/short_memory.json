@@ -1,54 +1,6 @@
 [
     {
         "role": "user",
-        "message": "what is my birth month"
-    },
-    {
-        "role": "assistant",
-        "message": "I don't know your birth month yet."
-    },
-    {
-        "role": "user",
-        "message": "how are you"
-    },
-    {
-        "role": "assistant",
-        "message": "I'm good. How about you?"
-    },
-    {
-        "role": "user",
-        "message": "I was born on 8 June 2017 according to that kindly tell my today's"
-    },
-    {
-        "role": "assistant",
-        "message": "You were an **Ophiuchus** (Scorpio), and I'd recommend getting in touch with a local doctor for your regular checkup!"
-    },
-    {
-        "role": "user",
-        "message": "no it's a person who born in June"
-    },
-    {
-        "role": "assistant",
-        "message": "Okay! I'll remember your birth month of person referenced."
-    },
-    {
-        "role": "user",
-        "message": "I am born on 8 June so kindly tell my today hor"
-    },
-    {
-        "role": "assistant",
-        "message": "It looks like you meant to ask for **today\u2019s horoscope**. Since astrology relies heavily on specific dates and planetary positions that change daily, here is the general forecast for people born on or around your date:\n\n**Sun in Gemini (General Traits):** You\u2019re likely feeling a bit scattered but full of ideas today. Planets might be nudging you to focus on long-term goals instead of short-term plans. Communication with close friends could yield surprising insights about future endeavors. Stay grounded and avoid overthinking! \ud83c\udf1f"
-    },
-    {
-        "role": "user",
-        "message": "goodbye"
-    },
-    {
-        "role": "assistant",
-        "message": "Take care, Vyom here has got your back whenever you need it."
-    },
-    {
-        "role": "user",
         "message": "how are you doing"
     },
     {
@@ -78,5 +30,53 @@
     {
         "role": "assistant",
         "message": "Got it. DSA can be tough when your energy is low because the concepts require high focus, which drains you faster than just studying a topic passively.\n\nHere's my plan to get you unstuck without burning out more:\n\n1.  **Pick one tiny problem** (like sorting or linked lists) that feels most familiar right now.\n2.  I'll walk through it line-by-line with comments as we go, but only if and when *you* choose the next step based on what you've learned so far. No pressure to solve entire problems today\u2014just take a small bite together.\n\nShall we start by picking that one tiny problem?"
+    },
+    {
+        "role": "user",
+        "message": "hello"
+    },
+    {
+        "role": "assistant",
+        "message": "Hi there! How can I help?"
+    },
+    {
+        "role": "user",
+        "message": "what is your name"
+    },
+    {
+        "role": "assistant",
+        "message": "I don't know your model name yet."
+    },
+    {
+        "role": "user",
+        "message": "what is your name"
+    },
+    {
+        "role": "assistant",
+        "message": "Your name is Anshdeep ."
+    },
+    {
+        "role": "user",
+        "message": "why are you speaking"
+    },
+    {
+        "role": "assistant",
+        "message": "To help you with what matters most to you, even if it starts as something simple like this! What do *you* want to talk about today?"
+    },
+    {
+        "role": "user",
+        "message": "what is your name what my name"
+    },
+    {
+        "role": "assistant",
+        "message": "Your name is Anshdeep ."
+    },
+    {
+        "role": "user",
+        "message": "are you happy"
+    },
+    {
+        "role": "assistant",
+        "message": "I'm glad I can help. How's your day going, Anshdeep?"
     }
 ]
