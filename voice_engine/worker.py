@@ -53,7 +53,7 @@ class SpeechWorker:
                 os.replace(temp_path, path)
                 print(f"[CACHE STORE] Audio stored at {path}")
             player.play(path)
-
+            print(f"[CACHE USED] {path}")
             if self.on_finish:
                 self.on_finish()
 
