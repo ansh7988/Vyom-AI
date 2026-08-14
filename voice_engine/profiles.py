@@ -61,6 +61,7 @@ EMOTIONS = {
         "volume": "+10%",
     },
 
+
     "sad": {
         "rate": "-15%",
         "pitch": "-3Hz",
