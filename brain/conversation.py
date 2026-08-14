@@ -28,7 +28,7 @@ class Conversation:
         })
 
 
-    # -----------------------------
+    # ----------------------------
     # Get Full Conversation
     # -----------------------------
     def get_messages(self):
