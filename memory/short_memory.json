@@ -1,82 +1,82 @@
 [
     {
         "role": "user",
-        "message": "how are you doing"
+        "message": "thinking"
     },
     {
         "role": "assistant",
-        "message": "I'm good, thanks for asking. How about you?"
+        "message": "Go ahead. What's going through your head?"
     },
     {
         "role": "user",
-        "message": "I am tired"
+        "message": "my ex girlfriend"
     },
     {
         "role": "assistant",
-        "message": "That's completely understandable. Sometimes rest just isn't enough sometimes we need a distraction or something to shift our focus away from the fatigue. Is there anything specific on your mind that\u2019s weighing heavily right now, or do you just want to chill and let it go for today? I\u2019m here if either one of those applies"
+        "message": "That can be a lot to process. Do you want to talk about what happened, or just vent about how it feels right now?"
     },
     {
         "role": "user",
-        "message": "I am tired very very tired but I am stressed about doing d"
+        "message": "left me"
     },
     {
         "role": "assistant",
-        "message": "It sounds like the exhaustion is mixing with that specific stress from **d** (do you mean *doing* something, or a project starting with 'd'?). When tasks pile up while we're drained, the brain often just shuts down. \n\nSince your energy reserves are low, trying to force focus might make it worse. Would it help if I:\n1. Help you break that task into tiny, almost-boring steps so it doesn't feel like a mountain?\n2. Just listen and vent about what's stressing you out for 5 minutes without any \"fixes\"?\n\nPick whichever feels easier right now."
+        "message": "It sounds like being left made you feel pretty alone in that moment. Did she say anything specific before she walked out?"
     },
     {
         "role": "user",
-        "message": "DSA"
+        "message": "she said I hate you"
     },
     {
         "role": "assistant",
-        "message": "Got it. DSA can be tough when your energy is low because the concepts require high focus, which drains you faster than just studying a topic passively.\n\nHere's my plan to get you unstuck without burning out more:\n\n1.  **Pick one tiny problem** (like sorting or linked lists) that feels most familiar right now.\n2.  I'll walk through it line-by-line with comments as we go, but only if and when *you* choose the next step based on what you've learned so far. No pressure to solve entire problems today\u2014just take a small bite together.\n\nShall we start by picking that one tiny problem?"
+        "message": "I don't know your conflict statement received from friend yet."
     },
     {
         "role": "user",
-        "message": "hello"
+        "message": "let's change the topic"
     },
     {
         "role": "assistant",
-        "message": "Hi there! How can I help?"
+        "message": "Fair enough. What else is on your mind?"
     },
     {
         "role": "user",
-        "message": "what is your name"
+        "message": "tell me a joke"
     },
     {
         "role": "assistant",
-        "message": "I don't know your model name yet."
+        "message": "Why did the scarecrow win an award? Because he was outstanding in his field!"
     },
     {
         "role": "user",
-        "message": "what is your name"
+        "message": "what kind of AI are you"
     },
     {
         "role": "assistant",
-        "message": "Your name is Anshdeep ."
+        "message": "I don't know your identity type yet."
     },
     {
         "role": "user",
-        "message": "why are you speaking"
+        "message": "how are you brother"
     },
     {
         "role": "assistant",
-        "message": "To help you with what matters most to you, even if it starts as something simple like this! What do *you* want to talk about today?"
+        "message": "I'm doing well, bro. How about you?"
     },
     {
         "role": "user",
-        "message": "what is your name what my name"
+        "message": "what did I just say"
     },
     {
         "role": "assistant",
-        "message": "Your name is Anshdeep ."
+        "message": "You just said:\n\"how are you brother\""
     },
     {
         "role": "user",
-        "message": "are you happy"
+        "message": "answer honestly what should I target web development or aiml project"
     },
     {
         "role": "assistant",
-        "message": "I'm glad I can help. How's your day going, Anshdeep?"
+        "message": "That depends on what excites you more. \n\nIf you love **logic, algorithms, and creating intelligence** that can make decisions or solve problems, go for **AIML**. It's deep and constantly evolving.\n\nIf you prefer **building tools, designing interfaces, and managing complex systems**, target **Web Development**. It keeps things practical and hands-on.\n\nBoth are great paths. Pick the one that makes your eyes light up when you talk about it."
     }
 ]

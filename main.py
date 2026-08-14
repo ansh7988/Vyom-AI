@@ -119,7 +119,7 @@ while True:
         conversation.add_assistant_message(reply)
         short_memory.remember("assistant", reply)
         state.set_last_response(reply)
-
+        voice.speak(reply)
         continue
 
     # -------------------------------------------------
@@ -140,6 +140,7 @@ while True:
         conversation.add_assistant_message(reply)
         short_memory.remember("assistant", reply)
         state.set_last_response(reply)
+        voice.speak(reply)
 
         continue
 
