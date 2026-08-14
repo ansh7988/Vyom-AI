@@ -1,46 +1,6 @@
 [
     {
         "role": "user",
-        "message": "thinking"
-    },
-    {
-        "role": "assistant",
-        "message": "Go ahead. What's going through your head?"
-    },
-    {
-        "role": "user",
-        "message": "my ex girlfriend"
-    },
-    {
-        "role": "assistant",
-        "message": "That can be a lot to process. Do you want to talk about what happened, or just vent about how it feels right now?"
-    },
-    {
-        "role": "user",
-        "message": "left me"
-    },
-    {
-        "role": "assistant",
-        "message": "It sounds like being left made you feel pretty alone in that moment. Did she say anything specific before she walked out?"
-    },
-    {
-        "role": "user",
-        "message": "she said I hate you"
-    },
-    {
-        "role": "assistant",
-        "message": "I don't know your conflict statement received from friend yet."
-    },
-    {
-        "role": "user",
-        "message": "let's change the topic"
-    },
-    {
-        "role": "assistant",
-        "message": "Fair enough. What else is on your mind?"
-    },
-    {
-        "role": "user",
         "message": "tell me a joke"
     },
     {
@@ -78,5 +38,45 @@
     {
         "role": "assistant",
         "message": "That depends on what excites you more. \n\nIf you love **logic, algorithms, and creating intelligence** that can make decisions or solve problems, go for **AIML**. It's deep and constantly evolving.\n\nIf you prefer **building tools, designing interfaces, and managing complex systems**, target **Web Development**. It keeps things practical and hands-on.\n\nBoth are great paths. Pick the one that makes your eyes light up when you talk about it."
+    },
+    {
+        "role": "user",
+        "message": "how are you bro"
+    },
+    {
+        "role": "assistant",
+        "message": "I'm doing well, thanks for asking! How about you?"
+    },
+    {
+        "role": "user",
+        "message": "just switched off"
+    },
+    {
+        "role": "assistant",
+        "message": "Sounds like you need a break. Take it easy. Let me know if you want to talk or need anything sorted later."
+    },
+    {
+        "role": "user",
+        "message": "how r u"
+    },
+    {
+        "role": "assistant",
+        "message": "I'm good, thanks for asking. How about you?"
+    },
+    {
+        "role": "user",
+        "message": "how r u"
+    },
+    {
+        "role": "assistant",
+        "message": "I'm doing well. Yourself?"
+    },
+    {
+        "role": "user",
+        "message": "how r u"
+    },
+    {
+        "role": "assistant",
+        "message": "Doing great. You?"
     }
 ]
