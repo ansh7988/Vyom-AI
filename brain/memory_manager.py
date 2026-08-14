@@ -10,6 +10,7 @@ class MemoryManager:
         self.memory = Memory()
         self.embedding = EmbeddingEngine()
 
+
     # -----------------------------
     # Save Memory
     # -----------------------------
