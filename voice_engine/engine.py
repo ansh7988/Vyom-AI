@@ -55,7 +55,6 @@ class VoiceEngine:
         )
 
         self.queue.add(request)
-        # Delete the file after playback
 
     def stop(self):
         if self.on_interrupt:
