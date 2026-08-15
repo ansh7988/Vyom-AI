@@ -49,6 +49,7 @@ class ShortMemory:
             if item["role"] == "user"
         ]
 
+
         if len(user_messages) < 2:
             return None
 
