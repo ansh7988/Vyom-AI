@@ -49,7 +49,7 @@ class SpeechWorker:
                         output_file=temp_path,
                     )
                 )
-
+                
                 os.replace(temp_path, path)
                 print(f"[CACHE STORE] Audio stored at {path}")
             player.play(path)
