@@ -42,6 +42,7 @@ class SpeechWorker:
 
                 temp_path = path + ".tmp.mp3"
 
+
                 asyncio.run(
                     generate_audio(
                         text=request.text,
