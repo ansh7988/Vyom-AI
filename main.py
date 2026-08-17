@@ -142,7 +142,6 @@ while True:
         state.set_last_response(reply)
         voice.speak(reply)
 
-
         continue
     # =================================================
     # AI MEMORY
