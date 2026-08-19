@@ -19,6 +19,5 @@ def detect_intent(user_input):
         "find"
     ]):
         return "SEARCH"
-
     return "CHAT"
 
