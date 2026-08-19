@@ -26,7 +26,6 @@ class Conversation:
             "role": "assistant",
             "content": message
         })
-
     # ----------------------------
     # Get Full Conversation
     # -----------------------------
