@@ -27,7 +27,6 @@ class AudioPlayer:
 
                 if not self.is_playing:
                     break
-
                 time.sleep(0.02)
             pygame.mixer.music.stop()
             pygame.mixer.music.unload()
