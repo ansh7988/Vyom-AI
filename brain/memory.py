@@ -13,7 +13,7 @@ class Memory:
 
         if not os.path.exists("memory"):
             os.makedirs("memory")
-
+            
         if not os.path.exists(self.file):
             with open(self.file, "w") as f:
                 json.dump({}, f, indent=4)
