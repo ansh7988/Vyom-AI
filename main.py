@@ -141,7 +141,6 @@ while True:
         short_memory.remember("assistant", reply)
         state.set_last_response(reply)
         voice.speak(reply)
-
         continue
     # =================================================
     # AI MEMORY
