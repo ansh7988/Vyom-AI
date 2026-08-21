@@ -151,7 +151,6 @@ while True:
     print(memory_result)
 
     if memory_result["intent"] == "remember":
-
         entity = memory_result["entity"]
 
         key = entity["type"]
