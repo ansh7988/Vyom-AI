@@ -146,6 +146,7 @@ while True:
     # AI MEMORY
     # =================================================
 
+
     memory_result = extract_memory(user_input)
 
     print(memory_result)
