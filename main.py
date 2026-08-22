@@ -81,7 +81,7 @@ while True:
 
     # -------------------------------------------------
     # Previous Question
-    # -----------------------------------------------
+    # ----------------------------------------------
     if action == "GET_PREVIOUS_QUESTION":
         previous_question = conversation.get_previous_user_message()
         if previous_question is None:
