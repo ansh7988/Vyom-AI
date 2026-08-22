@@ -84,7 +84,6 @@ while True:
     # -------------------------------------------------
 
     if action == "GET_PREVIOUS_QUESTION":
-
         previous_question = conversation.get_previous_user_message()
         if previous_question is None:
             reply = "You haven't asked a previous question yet."
