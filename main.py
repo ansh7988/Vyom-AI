@@ -79,7 +79,7 @@ while True:
     print(f"\n[Intent] -> {intent}")
     print(f"[Decision] -> {action}")
 
-    # -------------------------------------------------
+    # ------------------------------------------------
     # Previous Question
     # ----------------------------------------------
     if action == "GET_PREVIOUS_QUESTION":
