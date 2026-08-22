@@ -31,7 +31,7 @@ class Conversation:
     # -----------------------------
     def get_messages(self):
         return self.messages
-    
+
 
     # -----------------------------
     # Previous User Question
