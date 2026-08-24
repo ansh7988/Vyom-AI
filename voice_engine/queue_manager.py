@@ -2,7 +2,6 @@ from voice_engine.speech_request import SpeechRequest
 from collections import deque
 import threading
 class SpeechQueue:
-
     def __init__(self):
         self.queue = deque()
         self.condition = threading.Condition()
