@@ -6,6 +6,7 @@ class SpeechQueue:
         self.queue = deque()
         self.condition = threading.Condition()
 
+        
     def add(self, request: SpeechRequest):
 
         with self.condition:
