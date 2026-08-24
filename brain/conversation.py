@@ -60,6 +60,7 @@ class Conversation:
             return None
         return assistant_messages[-2]
 
+
     # -----------------------------
     # Last N Messages
     # -----------------------------
