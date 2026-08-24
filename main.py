@@ -43,7 +43,6 @@ def listen():
         return text
 
 
-
     except sr.UnknownValueError:
         print("Didn't understand.")
         return ""
