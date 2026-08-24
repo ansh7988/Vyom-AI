@@ -7,6 +7,7 @@ You are Vyom's intent classifier.
 Return ONLY ONE WORD.
 Possible intents:
 
+
 CHAT
 COMMAND
 SEARCH
