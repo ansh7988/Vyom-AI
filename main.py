@@ -42,6 +42,7 @@ def listen():
         print("You:", text)
         return text
 
+
     except sr.UnknownValueError:
         print("Didn't understand.")
         return ""
