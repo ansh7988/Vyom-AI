@@ -56,7 +56,6 @@ class Conversation:
             for message in self.messages
             if message["role"] == "assistant"
         ]
-
         if len(assistant_messages) < 2:
             return None
 
