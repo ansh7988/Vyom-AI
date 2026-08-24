@@ -58,7 +58,6 @@ class Conversation:
         ]
         if len(assistant_messages) < 2:
             return None
-
         return assistant_messages[-2]
 
     # -----------------------------
