@@ -51,7 +51,6 @@ class Conversation:
     # Previous Assistant Reply
     # -----------------------------
     def get_previous_assistant_message(self):
-
         assistant_messages = [
             message["content"]
             for message in self.messages
