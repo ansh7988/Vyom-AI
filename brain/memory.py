@@ -10,7 +10,6 @@ class Memory:
     def __init__(self):
 
         self.file = "memory/user_memory.json"
-
         if not os.path.exists("memory"):
             os.makedirs("memory")
             
