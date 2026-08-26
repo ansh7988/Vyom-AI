@@ -6,7 +6,6 @@ from brain.embedding_engine import EmbeddingEngine
 
 
 class Memory:
-
     def __init__(self):
         self.file = "memory/user_memory.json"
         if not os.path.exists("memory"):
