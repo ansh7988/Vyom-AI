@@ -37,6 +37,7 @@ def listen():
 
         audio = recognizer.listen(source)
 
+
     try:
         text = recognizer.recognize_google(audio)
         print("You:", text)
