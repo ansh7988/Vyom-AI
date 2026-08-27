@@ -1,9 +1,7 @@
 import json
 import os
 from datetime import datetime
-
 from brain.embedding_engine import EmbeddingEngine
-
 class Memory:
     def __init__(self):
         self.file = "memory/user_memory.json"
