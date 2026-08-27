@@ -28,7 +28,6 @@ class Memory:
 
         data = self.load()
 
-
         now = datetime.now().isoformat()
 
         # Create embedding BEFORE saving
