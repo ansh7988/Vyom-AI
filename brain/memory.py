@@ -26,6 +26,7 @@ class Memory:
 
     def remember(self, key, value, confidence=1.0):
 
+
         data = self.load()
 
         now = datetime.now().isoformat()
