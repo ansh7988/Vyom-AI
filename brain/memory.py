@@ -24,7 +24,6 @@ class Memory:
         with open(self.file, "w") as f:
             json.dump(data, f, indent=4)
 
-
     def remember(self, key, value, confidence=1.0):
 
         data = self.load()
