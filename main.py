@@ -200,6 +200,7 @@ while True:
 
         print("\nVyom: ", end="", flush=True)
 
+#main file saved
         assistant_reply = ""
 
         stream = chat(
