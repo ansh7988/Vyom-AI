@@ -43,6 +43,7 @@ def listen():
         print("Didn't understand.")
         return ""
 
+
     except sr.RequestError as e:
         print("Speech service error:", e)
         return ""
