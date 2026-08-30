@@ -155,6 +155,7 @@ while True:
         confidence = entity.get("confidence", 1.0)
 
 
+
         memory.save(
             key,
             value,
