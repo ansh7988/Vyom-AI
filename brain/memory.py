@@ -30,6 +30,8 @@ class Memory:
 
 
 
+
+
         now = datetime.now().isoformat()
 
         # Create embedding BEFORE saving
