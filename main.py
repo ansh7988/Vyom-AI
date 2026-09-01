@@ -172,7 +172,6 @@ while True:
 
 
 
-
     elif memory_result["intent"] == "recall":
 
         entity = memory_result["entity"]
