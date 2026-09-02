@@ -30,7 +30,6 @@ class Memory:
 
         now = datetime.now().isoformat()
 
-
         # Create embedding BEFORE saving
         embedding = self.embedding_engine.create_embedding(value)
 
