@@ -198,6 +198,7 @@ while True:
     # CHAT
     # =================================================
 
+
     if action == "CHAT":
 
         print("\nVyom: ", end="", flush=True)
