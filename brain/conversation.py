@@ -66,6 +66,7 @@ class Conversation:
     def get_last_messages(self, n):
         return self.messages[-n:]
 
+
     # -----------------------------
     # Clear Conversation
     # -----------------------------
