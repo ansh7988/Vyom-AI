@@ -39,6 +39,7 @@ class Memory:
 
             old_value = data[key]
 
+
             data[key] = {
                 "value": old_value,
                 "embedding": self.embedding_engine.create_embedding(old_value),
