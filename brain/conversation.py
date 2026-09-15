@@ -41,6 +41,7 @@ class Conversation:
         ]
 
 
+
         if len(user_messages) < 2:
             return None
 
