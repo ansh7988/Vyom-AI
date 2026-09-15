@@ -46,6 +46,7 @@ class Conversation:
         return user_messages[-2]
 
 
+
     # -----------------------------
     # Previous Assistant Reply
     # -----------------------------
