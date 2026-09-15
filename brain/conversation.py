@@ -10,7 +10,6 @@ class Conversation:
                 "content": get_personality()
             }
         ]
-
     # -----------------------------
     # Add Messages
     # -----------------------------
