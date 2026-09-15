@@ -40,8 +40,6 @@ class Conversation:
             if message["role"] == "user"
         ]
 
-
-
         if len(user_messages) < 2:
             return None
 
