@@ -20,7 +20,6 @@ class Conversation:
         })
 
 
-
     def add_assistant_message(self, message):
         self.messages.append({
             "role": "assistant",
