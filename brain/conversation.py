@@ -44,7 +44,6 @@ class Conversation:
             return None
 
         return user_messages[-2]
-
     # -----------------------------
     # Previous Assistant Reply
     # -----------------------------
