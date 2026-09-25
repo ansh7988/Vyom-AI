@@ -13,7 +13,7 @@ MEMORY
 User:
 {user_input}
 """
-    
+#response structure:
     response = chat(
         model="qwen3.5:4b",
         think=False,
