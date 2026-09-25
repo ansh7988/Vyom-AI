@@ -13,7 +13,6 @@ MEMORY
 User:
 {user_input}
 """
-
     response = chat(
         model="qwen3.5:4b",
         think=False,
