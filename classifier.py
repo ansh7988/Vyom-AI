@@ -9,7 +9,6 @@ CHAT
 COMMAND
 SEARCH
 MEMORY
-
 User:
 {user_input}
 """
