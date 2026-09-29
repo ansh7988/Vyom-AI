@@ -23,7 +23,7 @@ User:
             }
         ]
     )
-#aadded classfication logic to return only the intent word in uppercase
+#aadded classfication logic to return only the intent word
     
     return response["message"]["content"].strip().upper()
 #response = classify("What is the weather today?")
