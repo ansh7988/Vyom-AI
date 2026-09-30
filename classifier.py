@@ -26,6 +26,6 @@ User:
 #aadded 
     
     return response["message"]["content"].strip().upper()
-#response = classify("What is the weather today?")
+#response = classify("What is t
 #print(response)
 #SJSHJWJSWSB
