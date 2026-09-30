@@ -23,7 +23,7 @@ User:
             }
         ]
     )
-#aadded turn
+#aadded 
     
     return response["message"]["content"].strip().upper()
 #response = classify("What is the weather today?")
