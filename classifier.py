@@ -28,4 +28,4 @@ User:
     return response["message"]["content"].strip().upper()
 #response 
 #print(response)
-#Sure! Here's a 
+#Sure 
