@@ -26,4 +26,5 @@ User:
 #aadded 
     
     return response["message"]["content"].strip().upper()
+
 #response 
