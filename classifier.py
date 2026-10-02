@@ -27,4 +27,4 @@ User:
     
     return response["message"]["content"].strip().upper()
 #response 
-#print(response["message"]["content"].strip().upper())
+#print(response["message"]["content"].strip()
