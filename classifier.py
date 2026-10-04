@@ -28,4 +28,3 @@ User:
     return response["message"]["content"].strip().upper()
 
 #response is added 
-#sample 
