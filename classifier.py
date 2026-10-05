@@ -27,4 +27,4 @@ User:
     
     return response["message"]["content"].strip().upper()
 
-#response 
+#response is a dictionary with keys: 'message', 'usage', 'model', 'id', 'object', 'created'
