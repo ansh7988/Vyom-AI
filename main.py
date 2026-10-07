@@ -235,4 +235,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#do whatever u want ! just believe in yourself and keep exploring new things.
+#do whatever u want ! just believe in yourself and keep exploring new things. You are capable of achieving great things, and your curiosity will lead you to amazing discoveries.
