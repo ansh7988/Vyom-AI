@@ -27,4 +27,4 @@ User:
     
     return response["message"]["content"].strip().upper()
 
-#response is a dictionary with keys: 'message', 
+#response is a dictionary with keys 
