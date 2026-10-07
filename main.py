@@ -235,4 +235,5 @@ while True:
 
         voice.speak(assistant_reply)
 
-#do whatever u want ! just believe in yourself and keep exploring new things. You 
+#do whatever u want ! just believe in yourself and keep exploring new thing.
+Me to myself: tu sab to best hai , u have a good heart and willingnes to learn , this will surely take u to that much height that even u have never imagined.So neveer loose hope and keep learning ...Anshdeep Singh tu best aa yr , gaj ke jaikara gajave nehal hojave , shaheed singh de mann nu bhave , nehal ho ja vee 
