@@ -235,4 +235,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#do whatever u want ! just believe 
+#do whatever u want 
