@@ -235,4 +235,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#do whatever u want to do and see where u go !
+#do whatever u want to do and see where u end up
