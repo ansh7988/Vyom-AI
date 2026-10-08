@@ -27,4 +27,4 @@ User:
     
     return response["message"]["content"].strip().upper()
 
-#response is returned as a string in uppercase
+#response is 
