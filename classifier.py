@@ -27,4 +27,4 @@ User:
     
     return response["message"]["content"].strip().upper()
 
-#response is returned as a string in uppercase, which is the intent of the 
+#response is returned as a string in uppercase
