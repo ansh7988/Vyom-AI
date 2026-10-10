@@ -234,5 +234,3 @@ while True:
         )
 
         voice.speak(assistant_reply)
-
-#do whatever u want , fuck bc kuch nai kiya tune bkl
