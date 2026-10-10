@@ -140,7 +140,6 @@ while True:
     # =================================================
     # AI MEMORY
     # =================================================
-#dvrr ai memory
 
     memory_result = extract_memory(user_input)
 
