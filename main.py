@@ -234,3 +234,5 @@ while True:
         )
 
         voice.speak(assistant_reply)
+
+#response saved
