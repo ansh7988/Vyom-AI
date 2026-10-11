@@ -74,3 +74,5 @@ class Conversation:
                 "content": get_personality()
             }
         ]
+
+#conversation = Conversation() added to brain/conversation.py
