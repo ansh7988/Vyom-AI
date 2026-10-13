@@ -75,4 +75,4 @@ class Conversation:
             }
         ]
 
-#conversation = Conversation() added to brain/conversation.py
+#conversation = Conversation() added to brain/conversation
