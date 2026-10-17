@@ -75,4 +75,4 @@ class Conversation:
             }
         ]
 
-#conversation = Conversation() if you want to use it as a singleton, but I recommend creating a new instance for 
+#conversation = Conversation() if you want to use it as a singleton, but I recommend creating a new 
