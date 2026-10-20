@@ -75,4 +75,4 @@ class Conversation:
             }
         ]
 
-#conversatnversation() if you want to use it as a singleton
+#conversatnversation() if you want to use it as 
