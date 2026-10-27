@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#response is generated and 
+#response 
