@@ -233,3 +233,5 @@ while True:
         )
 
         voice.speak(assistant_reply)
+
+#remembering the last user message
