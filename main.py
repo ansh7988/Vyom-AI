@@ -233,3 +233,5 @@ while True:
         )
 
         voice.speak(assistant_reply)
+
+#in the main.py file, the code sets up a conversational AI named Vyom that listens to user input via microphone, processes it to detect intent, and responds accordingly. It can remember and recall information, provide previous messages, and engage in chat using a language model. The code also includes voice output for responses.
