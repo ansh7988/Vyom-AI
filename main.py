@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#remembering  
+#remember the name Carlos Braithwate  
