@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in the main.py file, the code sets up a conversational AI named Vyom that . It can remember and recall information, provide previous messages, and engage in chat using a language model. The code also includes voice output for responses.
+#in the main.py file, the code sets up a conversational  using a language model. The code also includes voice output for responses.
