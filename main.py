@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in the main.py file, the code sets up a conversational
+#in the main.py file
