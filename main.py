@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in the main.py we have implemented a voice-based AI assistant named Vyom. The assistant listens to user input through the microphone, processes the input to detect intent, and decides on an appropriate action. It can remember and recall information, provide previous messages, and engage in chat using a language model.  
+#in the main.py we have implemented a voice-based AI assistant named Vyom. The assistant listens to user input through the microphone, processes the input to detect intent, and decides on an appropriate action.
