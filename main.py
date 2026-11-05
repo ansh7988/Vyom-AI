@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in the main.py we have implemented a voice-based 
+#in the main.py we have implemented 
