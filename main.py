@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in the main file, the code is complete and functional. It initializes the Vyom AI system, listens for user input via microphone, processes the input to detect intent, manages conversation state, and generates responses using a chat model. The system can remember and recall information based on user commands, and it provides 
+#in the main file, the code is complete and functional. It initializes the Vyom AI system, listens for user input via microphone, processes the input to detect intent, manages conversation state, and generates responses using a chat model. The system can remember and recall information based on user commands
