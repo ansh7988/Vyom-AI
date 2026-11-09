@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in the main file, the code is complete and functional. It initializes the Vyom AI system 
+#in the main file, the code is complete and functional.  
