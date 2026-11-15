@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in this file, I have added the main loop for the Vyom AI assistant. It listens for user input, processes it to detect intent, and decides on an action. Depending on the action, it can retrieve previous messages, manage memory, or engage in a chat with the user. The assistant's responses are printed  
+#in this file, I have added the main loop for the Vyom AI assistant. It listens for user input, processes it to detect intent, and decides on an action. Depending on the action, it can retrieve previous messages, manage memory, or engage in a chat with the user. The assistant's   
