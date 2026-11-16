@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in this file, I have added the 
+#in this file, I have 
