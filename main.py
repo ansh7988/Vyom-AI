@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in  main file we have implemented the main loop for the 
+#in  main file we have implemented the main loop 
