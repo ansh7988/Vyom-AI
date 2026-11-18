@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in
+#in main.py we added ollama chat streaming and voice output for assistant replies. The code listens for user input, processes it to detect intent, manages memory, and generates responses accordingly.
