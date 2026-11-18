@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#in main.py we added ollama chat streaming 
+#in main.py we added ollama  
