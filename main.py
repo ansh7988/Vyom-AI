@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#main. py is changed 
+#main. py is 
