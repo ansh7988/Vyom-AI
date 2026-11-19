@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#main file saved and in this file 
+#main file saved and in 
