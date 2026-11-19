@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#main file saved and in this file ollama conversation is executed.
+#main file saved and in this file ollama conversation is 
