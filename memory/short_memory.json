@@ -1,9 +1,5 @@
 [
     {
-        "role": "user",
-        "message": "tell me a joke"
-    },
-    {
         "role": "assistant",
         "message": "Why did the scarecrow win an award? Because he was outstanding in his field!"
     },
@@ -78,5 +74,9 @@
     {
         "role": "assistant",
         "message": "Doing great. You?"
+    },
+    {
+        "role": "user",
+        "message": "hello"
     }
 ]
