@@ -234,3 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
+#main.py changed
