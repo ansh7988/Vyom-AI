@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#this file contains the main loop of the Vyom AI application, which listens for user input, processes it, and generates responses basedn 
+#this file contains the main loop of the Vyom AI application, which listens for user input, processes it, and generates responses 
