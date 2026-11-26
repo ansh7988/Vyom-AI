@@ -234,4 +234,4 @@ while True:
 
         voice.speak(assistant_reply)
 
-#this file contains the 
+#this file contains 
